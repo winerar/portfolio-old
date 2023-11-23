@@ -1,0 +1,17 @@
+@keyframes bg-animation {
+  0%,
+  25%,
+  100% {
+    background-size: 20rem;
+  }
+
+  30%,
+  40% {
+    background-size: 10rem;
+  }
+
+  75%,
+  80% {
+    background-size: 25rem;
+  }
+}
