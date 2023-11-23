@@ -11,7 +11,7 @@ const Landing: React.FC = (): JSX.Element => {
       <main>
         <Projects />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
