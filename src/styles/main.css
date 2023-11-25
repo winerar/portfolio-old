@@ -1,5 +1,5 @@
-@import "reset.css";
-@import "animations.css";
+@import "./reset.css";
+@import "./animations.css";
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Ubuntu:wght@400;500;700&display=swap");
 
 /*
@@ -74,9 +74,11 @@ a {
   margin-bottom: 3.75rem;
   transition: var(--color-transition);
   font-size: 3.75rem;
-  font-weight: 700;
+  font-weight: 900;
   color: var(--title-1);
   text-align: center;
+  font-family: "Jetbrains Mono";
+  letter-spacing: -0.25rem;
 }
 
 .title-2 {
@@ -86,6 +88,8 @@ a {
   font-weight: 700;
   line-height: 1.3;
   color: var(--title-2);
+  font-family: "Jetbrains Mono";
+  letter-spacing: -0.25rem;
 }
 
 .none {
@@ -121,10 +125,20 @@ a {
   font-size: 1.5rem;
   font-family: "JetBrains Mono", monospace;
   color: var(--header-text);
+  letter-spacing: -0.0625rem;
 }
 
 .logo strong {
+  position: relative;
   font-weight: 700;
+  text-transform: uppercase;
+  background: var(--accent);
+  padding: 1rem;
+}
+
+.text-typer {
+  border-right: 0.1em solid white;
+  /* animation: blink-caret 0.75s step-end infinite; */
 }
 
 .nav-list {
@@ -158,7 +172,7 @@ a {
   top: 100%;
   left: 0;
   width: 100%;
-  height: 0.125rem;
+  height: 100%;
   background-color: var(--accent);
 }
 
@@ -246,7 +260,26 @@ a {
 }
 
 .header__title em {
+  position: relative;
   color: var(--accent);
+}
+
+.header__title em:hover {
+  background: linear-gradient(
+    to right,
+    var(--accent) 0%,
+    var(--accent) 20%,
+    var(--white) 22%,
+    var(--accent) 25%,
+    var(--accent) 35%,
+    var(--white) 40%,
+    var(--accent) 45%,
+    var(--accent) 100%
+  );
+  background-clip: text;
+  color: transparent;
+  background-size: 500% auto;
+  animation: text-shine 2s ease-in-out;
 }
 
 .header__text {
@@ -266,10 +299,10 @@ a {
   align-items: center;
   column-gap: 0.625rem;
   width: fit-content;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 2rem;
   transition: all 0.2s ease-in;
   background-color: var(--accent);
-  border-radius: 18.75rem;
+  /* border-radius: 18.75rem; */
   font-size: 1rem;
   font-weight: 500;
   color: var(--white);
@@ -277,14 +310,15 @@ a {
 }
 
 .btn:hover {
-  padding: 0.75rem 1.75rem;
-  background-color: var(--white);
-  color: var(--accent);
+  /* padding: 1rem 2.5rem; */
+  letter-spacing: 0.1rem;
+  /* background-color: var(--white);
+  color: var(--accent); */
+  /* transform: translateY(-0.25rem); */
 }
 
 .btn:active {
-  position: relative;
-  top: 0.0625rem;
+  letter-spacing: -0.1rem;
 }
 
 .btn-outline {
@@ -417,24 +451,12 @@ a {
   color: var(--header-text);
 }
 
-/* .footer::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -6.25rem;
-  left: 0;
-  width: 100%;
-  height: 6.25rem;
-  margin-bottom: -6.25rem;
-  background-color: var(--dark-bg);
-}
 .footer__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 1.6875rem;
 }
-*/
 
 .social {
   display: flex;
@@ -454,7 +476,7 @@ a {
   margin-top: 0.5em;
 }
 
-@media (max-width: 67.5rem) {
+/* @media (max-width: 67.5rem) {
   .project {
     max-width: 57.5rem;
   }
@@ -661,4 +683,4 @@ a {
   .footer__wrapper {
     row-gap: 1.25rem;
   }
-}
+} */
