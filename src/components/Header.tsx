@@ -1,3 +1,5 @@
+import CV from "../assets/files/alexander-karachevtsev-cv-en.pdf";
+
 const Header: React.FC = (): JSX.Element => {
   return (
     <header className="header">
@@ -9,6 +11,16 @@ const Header: React.FC = (): JSX.Element => {
           <br />
           I'm a frontend developer
         </h1>
+        <div className="header__text">
+          <p>with passion for learning and creating</p>
+        </div>
+        <a
+          className="btn"
+          href={CV}
+          download
+        >
+          Download CV
+        </a>
       </div>
     </header>
   );
